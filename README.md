@@ -1,11 +1,11 @@
 # Simple VR with Elm and A-Frame
 
-##‚±‚ÌƒŠƒ|ƒWƒgƒŠ‚ÍAA-FrameƒV[ƒ“‚ðŽ‚Á‚½ElmƒAƒvƒŠ‚Å‚·B‹°—³‚ðVR‹óŠÔ“à‚Å360‹Ž©—R‚É“®‚©‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B
-ƒTƒ“ƒvƒ‹‚ð‰{——‚·‚é‚É‚Í
-    cd /ƒtƒ@ƒCƒ‹ŠK‘w/2_walk #2_walkƒtƒHƒ‹ƒ_‚ª’u‚©‚ê‚½‚Æ‚±‚ëˆÚ“®
-    npm install             #ƒCƒ“ƒXƒg[ƒ‹ŽÀsƒRƒ}ƒ“ƒh
-    npm run start           #ƒXƒ^[ƒg
+##ã“ã®ãƒªãƒã‚¸ãƒˆãƒªã¯ã€A-Frameã‚·ãƒ¼ãƒ³ã‚’æŒã£ãŸElmã‚¢ãƒ—ãƒªã§ã™ã€‚æç«œã‚’VRç©ºé–“å†…ã§360Â°è‡ªç”±ã«å‹•ã‹ã™ã“ã¨ãŒã§ãã¾ã™ã€‚
+##ã‚µãƒ³ãƒ—ãƒ«ã‚’é–²è¦§ã™ã‚‹ã«ã¯
+    cd /ãƒ•ã‚¡ã‚¤ãƒ«éšŽå±¤/2_walk  ##2_walkãƒ•ã‚©ãƒ«ãƒ€ãŒç½®ã‹ã‚ŒãŸã¨ã“ã‚ç§»å‹•
+    npm install             ##ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å®Ÿè¡Œã‚³ãƒžãƒ³ãƒ‰
+    npm run start           ##ã‚¹ã‚¿ãƒ¼ãƒˆ
     
-‚»‚ê‚©‚ç[httpF// localhostF8080]‚ÉÚ‘±‚µ‚Ü‚·B
-‰{——‰Â”\‚É‚È‚è‚Ü‚·B
+##ãã‚Œã‹ã‚‰[httpï¼š// localhostï¼š8080]ã«æŽ¥ç¶šã—ã¾ã™ã€‚
+##é–²è¦§å¯èƒ½ã«ãªã‚Šã¾ã™ã€‚
 
