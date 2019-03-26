@@ -35,14 +35,14 @@ models =
 
 init : ( Model, Cmd Msg )
 init =
-    ( { time = 0, positx = 0, posity = -2, positz = -13, direct = 0, cameray = -2 }, Cmd.none )
+    ( { time = 0, positx = 0, posity = -2, positz = 2, direct = 0, cameray = -2 }, Cmd.none )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         TimeUpdate diff ->
-            { model | posity = if model.posity > -2 then model.posity - 0.25 else model.posity
+            { model | posity = if model.posity > -2 then model.posity - 0.1 else model.posity
                     } ! []
         Increment ->
             { model | positx = if model.direct == 0 then model.positx + 1
@@ -78,14 +78,14 @@ update msg model =
                     , time = model.time + 500
                     } ! []
         Jump ->
-            { model | posity = 6
+            { model | posity = 0.01
                     , time = model.time + 1000
                     } ! []
         Reset ->
             { model | time = 0
                     , positx = 0
                     , posity = -2
-                    , positz = -13
+                    , positz = 2
                     , direct = 0
                     } ! []
         Jumped ->
@@ -134,12 +134,28 @@ view model =
     in
         div []
             [ div []
-                  [ button [ onClick Increment ] [ text "Front" ]
-                  , button [ onClick Decrement ] [ text "Back" ]
-                  , button [ onClick Turn ] [ text "Turn" ]
-                  , button [ onClick Jump ] [ text "Jump" ]
-                  , button [ style [("background-color", "gray")], onClick Reset ] [ text "Reset" ]
-                  ]
+                  [ button [ style [("background-color", "#86f442")]
+                        , style [ ("padding", "10px")]
+                        , style [ ("border-radius", "3px")]
+                        , style [ ("position", "fixid")]
+                        ,onClick Increment ] [ text "前進" ]
+                  , button [ style [("background-color", "#86f442")]
+                        , style [ ("padding", "10px")]
+                        , style [ ("border-radius", "3px")] 
+                        ,onClick Decrement ] [ text "後退" ]
+                  , button [ style [("background-color", "#86f442")]
+                        , style [ ("padding", "10px")]
+                        , style [ ("border-radius", "3px")]
+                        , onClick Turn ] [ text "方向転換" ]
+                  , button [ style [("background-color", "#86f442")]
+                        , style [ ("padding", "10px")]
+                        , style [ ("border-radius", "3px")]
+                        , onClick Jump ] [ text "飛ぶ" ]
+                  , button [ style [("background-color", "#86f442")]
+                        , style [ ("padding", "10px")]
+                        , style [ ("border-radius", "3px")]
+                        , onClick Reset ] [ text "開始位置" ]
+              ]
               ,scene []
                   [ camera [ wasdControlsEnabled False, position 0 model.cameray 8 ] []
                   ,grid
@@ -150,16 +166,16 @@ view model =
                   , assets [] ([] ++ getModels)
                   , entity
                     [ plymodel modelsrc
-                    , scale 0.5 0.5 0.5
+                    , scale 0.1 0.1 0.1
                     , position model.positx model.posity model.positz
                     , rotation -90 model.direct 0
                     ]
                     []
                   , entity
-                    [ plymodel "src: url(./sword.ply)"
-                    , scale 0.3 0.3 0.3
-                    , position 0 -6 -2
-                    , rotation -90 0 0
+                    [ plymodel "src: url(./lowpolytree.ply)"
+                    , scale 1.2 1.2 1.2
+                    , position 0 0 -2
+                    , rotation 180 90 180
                     ]
                     []
                   ]
