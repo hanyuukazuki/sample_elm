@@ -1,26 +1,11 @@
 # Simple VR with Elm and A-Frame
 
-## Try it
-[Step 0](https://tilmans.github.io/elm-aframe-example/0/)  
-[Step 1](https://tilmans.github.io/elm-aframe-example/1/)  
-[Step 2](https://tilmans.github.io/elm-aframe-example/2/)
-
-## Getting started
-This repository is split up into multiple steps, corresponding to the tutorials. You can use the `0_start` directory as a starting point for your own projects. It contains the minimal webpack setup and page structure and has a working Elm app with an (empty) A-Frame scene. To use any of the steps:
-
-    cd 0_start
-    npm install
-    npm run start
+##このリポジトリは、A-Frameシーンを持ったElmアプリです。恐竜をVR空間内で360°自由に動かすことができます。
+サンプルを閲覧するには
+    cd /ファイル階層/2_walk #2_walkフォルダが置かれたところ移動
+    npm install             #インストール実行コマンド
+    npm run start           #スタート
     
-Then you can connect to [http://localhost:8080](http://localhost:8080). 
-
-## Connecting from another device
-If you want to connect from another device, for example your mobile phone, you need to enable remote connections:
-
-* Open `package.json`
-* Look for the line:  
-    `"start": "webpack-dev-server --hot --inline --content-base src/",`
-* Replace it with:  
-    `"start": "webpack-dev-server --hot --host 0.0.0.0 --inline --content-base src/",`
-    
+それから[http：// localhost：8080]に接続します。
+閲覧可能になります。
 
