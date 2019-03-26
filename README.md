@@ -7,6 +7,8 @@ cd /ファイル階層/2_walk  ##2_walkフォルダが置かれたところ移�
 
 npm install             ##インストール実行コマンド
 
+elm init                ##elm実行
+
 npm run start           ##スタート
     
 ##それから[http：// localhost：8080]に接続します。
